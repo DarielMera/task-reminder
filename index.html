@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" />-->
+        <link rel="stylesheet" href="style.css">
+        <title>Task Manager</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="headerMessanger-container">
+                <header class="header-container">
+                    <button id="newListBtn" class="btn">New List</button>
+                    <!-- <div class="head-padder"></div> -->
+                    <div class="btnActionGroup">
+                        <button id="opnListBtn" class="btn">Open</button>
+                        <button id="savBtn" class="btn">save</button>
+                        <button id="delListBtn" class="btn">delete</button>
+                        <div id="opnMenuDisplayer" class="opnMenuDisplayer">
+                        </div>
+                    </div>
+                    <h1 class="title">Task Reminder</h1>
+                </header>
+                <div id="messanger" class="messanger"></div>
+            </div>
+
+            <div class="taskReminder-container">
+                <input type="text" id="newListTitle" class="addTask-title" placeholder="List Name..."></input>
+
+                <div class="addTaskWrapper">
+                    <div class="btnInputWrapper">
+                        <button id="addBtn" class="btn">+</button>
+                        <input id="txtInp" type="text" placeholder="New Task...">
+                    </div>
+                </div>
+                <div id="listDisplayer" class="list-displayer"></div>
+            </div>
+        </div>
+        <script type="module" src="script.js"></script>
+    </body>
+
+</html>
