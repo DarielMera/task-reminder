@@ -1,5 +1,6 @@
-const listDisplayer = document.getElementById("listDisplayer")
+import { txtInp } from "./script.js"
 
+const listDisplayer = document.getElementById("listDisplayer")
 
 export default function addTaskToList() {
 	const valueFromText = txtInp.value
@@ -54,5 +55,13 @@ export default function addTaskToList() {
 			ulElems.item(idx).remove()
 		})
 	})
-}
 
+	const listDisplayerChildrens = document.querySelectorAll(".liElement")
+	console.log(listDisplayerChildrens)
+	listDisplayerChildrens.forEach((item)=>{
+		console.log(item.innerHTML) 
+		item.addEventListener('click', ()=> item.contentEditable = true)
+		item.addEventListener("keydown", event => event.key === "Enter" && txtInp.focus())
+
+	})
+}

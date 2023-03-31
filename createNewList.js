@@ -1,4 +1,5 @@
 import saveListFunc from "./saveList.js"
+import { txtInp } from "./script.js"
 
 export default function createNewList() {
 	const newListTitle = document.getElementById("newListTitle")
@@ -10,5 +11,6 @@ export default function createNewList() {
 		listDisplayer.remove()
 		location.reload()
 	}
-    newListTitle.focus()
+    txtInp.focus()
+    
 }

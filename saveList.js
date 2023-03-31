@@ -22,6 +22,7 @@ export default function saveListFunc() {
 	messangerElem.innerText = "List Saved !"
 	 setTimeout(() => {
 		messangerElem.innerHTML = ""
+		location.reload()
 	 }, 1500);
 
 }

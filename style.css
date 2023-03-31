@@ -132,16 +132,18 @@ padding: 0;
 	height: min-content;
 }
 
- .opnMenuDisplayer {
-	text-align:left;
-	display: none;
-	position: absolute;
-	left: 40px;
-	padding: 2px;
-	background-color: rgba(0, 0, 0, 0.2);
-	border-radius: 2px;
+.opnMenuDisplayer {
+    text-align: left;
+    display: none;
+    position: absolute;
+    left: 44px;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    font-size: .8rem;
+    margin-top: 4px;
+}
 
-} 
 .opnMenuDisplayer div:hover {
 cursor: pointer;
 background-color: rgba(0, 0, 0, 0.5);
@@ -228,6 +230,11 @@ border-radius: 2px;
 	color: #f8ead8;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 	white-space: normal;
+	outline: none;	
+}
+
+.liElement:focus {
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .liElement:hover {

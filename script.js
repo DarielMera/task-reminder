@@ -11,7 +11,8 @@ const opnListBtn = document.getElementById("opnListBtn")
 const txtInp = document.getElementById("txtInp")
 const newListTitle = document.getElementById("newListTitle")
 
-document.onload = newListTitle.focus()
+
+document.onload = txtInp.focus()
 
 addBtn.addEventListener("click", addTaskToList)
 savBtn.addEventListener("click", saveListFunc)
@@ -19,9 +20,18 @@ opnListBtn.addEventListener('click', getListOfItemsFromLocalStorage)
 txtInp.addEventListener("keydown", event => event.key === "Enter" && addTaskToList())
 newListTitle.addEventListener("keydown", event => event.key === "Enter" && txtInp.focus())
 newListBtn.addEventListener("click", createNewList)
+delListBtn.addEventListener("click", getListOfItemsFromLocalStorage)
+// delListBtn.addEventListener("click", deleteSelectedListFromLocalStorage)
 // --------------CRUD---------------------------------------
 
 
+
+
+
+
+
+
+export {txtInp}
 
 
 

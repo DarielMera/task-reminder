@@ -7,9 +7,9 @@ export default function getListOfItemsFromLocalStorage() {
            listOfItems.push(localStorage.key(i))
        } 
     }
-    let newListOfItems = listOfItems.map(item => {
+    let newListOfItems = listOfItems.map((item,idx) => {
        return (
-           `<div>${item.slice(3)}</div>`
+           `<div>${idx + 1} ${item.slice(3)}</div>`
        )
     })
     opnMenuDisplayer.innerHTML = newListOfItems.join('')
