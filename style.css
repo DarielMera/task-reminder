@@ -29,14 +29,13 @@ body {
 	max-width: 900px;
 }
 
-.headerMessanger-container{
-position: relative;
-display: flex;
-flex-direction: column;
-width: 70%;
-margin: 0;
-padding: 0;
-
+.headerMessanger-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	margin: 0;
+	padding: 0;
 }
 
 .messanger {
@@ -44,7 +43,6 @@ padding: 0;
 	bottom: 25px;
 	align-self: center;
 	color: white;
-	/* visibility: hidden; */
 }
 
 .header-container {
@@ -66,7 +64,7 @@ padding: 0;
 	width: 33.3%;
 }
 .title {
-	align-self: flex-start;
+	align-self: center;
 	font-size: 2em;
 	width: 33.3%;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
@@ -133,22 +131,23 @@ padding: 0;
 }
 
 .opnMenuDisplayer {
-    text-align: left;
-    display: none;
-    position: absolute;
-    left: 44px;
-    padding: 6px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-    font-size: .8rem;
-    margin-top: 4px;
+	text-align: left;
+	display: none;
+	position: absolute;
+	left: 44px;
+	padding: 6px;
+	border-radius: 2px;
+	font-size: 0.8rem;
+	margin-top: 4px;
+	overflow: scroll;
+	height: 200px;
 }
 
 .opnMenuDisplayer div:hover {
-cursor: pointer;
-background-color: rgba(0, 0, 0, 0.5);
-padding: 2px;
-border-radius: 2px;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 2px;
+	border-radius: 2px;
 }
 
 #addBtn {
@@ -164,25 +163,13 @@ border-radius: 2px;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	letter-spacing: 1px;
 }
 
-#newListBtn{
+#newListBtn {
 	font-size: 1em;
 	width: 80px;
 	height: 80px;
 }
-/* #opnListBtn{
-	position: relative;
-} */
-/* #opnListBtn::after {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	content: 'testing';
-	color: rgb(6, 5, 5);
-	background-color: red;
-} */
 
 .listDelBtn {
 	border-radius: 2px;
@@ -230,7 +217,7 @@ border-radius: 2px;
 	color: #f8ead8;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 	white-space: normal;
-	outline: none;	
+	outline: none;
 }
 
 .liElement:focus {

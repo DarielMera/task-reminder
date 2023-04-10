@@ -1,38 +1,22 @@
-const opnMenuDisplayer = document.getElementById("opnMenuDisplayer")
+export const opnMenuDisplayer = document.getElementById("opnMenuDisplayer")
 
 export default function getListOfItemsFromLocalStorage() {
-    let listOfItems = []
-    for (let i = 0; i < localStorage.length ; i++) {
-       if(localStorage.key(i).startsWith("tr-")){
-           listOfItems.push(localStorage.key(i))
-       } 
-    }
-    let newListOfItems = listOfItems.map((item,idx) => {
-       return (
-           `<div>${idx + 1} ${item.slice(3)}</div>`
-       )
-    })
-    opnMenuDisplayer.innerHTML = newListOfItems.join('')
-    opnMenuDisplayer.style.display = 'block'
-    console.log(listOfItems)
+	let listOfItems = []
+	for (let i = 0; i < localStorage.length; i++) {
+		if (localStorage.key(i).startsWith("tr-")) {
+			listOfItems.push(localStorage.key(i))
+		}
+	}
 
-    selectListKey()
-    opnMenuDisplayer.addEventListener("mouseleave",() => {
-        opnMenuDisplayer.style.display = 'none'
-    })
+	listOfItems.sort()
 
-}
+	let newListOfItems = listOfItems.map((item, idx) => {
+		return `<div>${idx + 1}- ${item.slice(3)}</div>`
+	})
+	opnMenuDisplayer.innerHTML = newListOfItems.join("")
+	opnMenuDisplayer.style.display = "block"
 
-
-function selectListKey() {
-   const listOfAvailableKeys = document.querySelectorAll('.opnMenuDisplayer div')
-   listOfAvailableKeys.forEach(listKey => {
-       listKey.addEventListener("click", event => {
-           console.log(JSON.parse(localStorage.getItem('tr-' + event.target.innerText.toString())))
-           // 
-           opnMenuDisplayer.style.display = 'none'
-
-       })
-       
-   })
+	opnMenuDisplayer.addEventListener("mouseleave", () => {
+		opnMenuDisplayer.style.display = "none"
+	})
 }

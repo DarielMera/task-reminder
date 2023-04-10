@@ -11,18 +11,17 @@ export default function saveListFunc() {
 		newListTitle.focus()
 		return
 	}
-    
+
 	if (ulElems.length === 0) {
 		alert("Your list is empty - Please add new task")
 		return
 	}
+
 	const dataJson = JSON.stringify(collectData())
-	localStorage.setItem('tr-' + newListTitle.value.toString().toLowerCase(), dataJson)
+
+	localStorage.removeItem("tr-" + newListTitle.value.toLowerCase(), dataJson)
+	localStorage.setItem("tr-" + newListTitle.value.toLowerCase(), dataJson)
 
 	messangerElem.innerText = "List Saved !"
-	 setTimeout(() => {
-		messangerElem.innerHTML = ""
-		location.reload()
-	 }, 1500);
-
+	location.reload()
 }

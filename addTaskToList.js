@@ -56,12 +56,13 @@ export default function addTaskToList() {
 		})
 	})
 
-	const listDisplayerChildrens = document.querySelectorAll(".liElement")
-	console.log(listDisplayerChildrens)
-	listDisplayerChildrens.forEach((item)=>{
-		console.log(item.innerHTML) 
-		item.addEventListener('click', ()=> item.contentEditable = true)
-		item.addEventListener("keydown", event => event.key === "Enter" && txtInp.focus())
+	makeListDisplayerChildrensEditable()
+}
 
+export function makeListDisplayerChildrensEditable() {
+	const listDisplayerChildrens = document.querySelectorAll(".liElement")
+	listDisplayerChildrens.forEach(item => {
+		item.addEventListener("click", () => (item.contentEditable = true))
+		item.addEventListener("keydown", event => event.key === "Enter" && txtInp.focus())
 	})
 }
